@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XcodeProgram compiler-info="XcodeML/Fortran-FrontEnd" language="Fortran" source="original.f90" time="2018-06-06 14:48:32" version="1.0">
+  <typeTable>
+    <FfunctionType is_program="true" return_type="Fvoid" type="F55a4be91fa40"/>
+    <FbasicType ref="Fcharacter" type="C55a4be9215d0">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType ref="Fcharacter" type="C55a4be922b00">
+      <len>
+        <FintConstant type="Fint">17</FintConstant>
+      </len>
+    </FbasicType>
+  </typeTable>
+  <globalSymbols>
+    <id sclass="ffunc" type="F55a4be91fa40">
+      <name>first_program</name>
+    </id>
+  </globalSymbols>
+  <globalDeclarations>
+    <FfunctionDefinition file="original.f90" lineno="1">
+      <name type="F55a4be91fa40">first_program</name>
+      <symbols>
+        <id sclass="flocal" type="Fint">
+          <name>i</name>
+        </id>
+      </symbols>
+      <declarations>
+        <varDecl file="original.f90" lineno="3">
+          <name type="Fint">i</name>
+        </varDecl>
+      </declarations>
+      <body>
+        <FdoStatement file="original.f90" lineno="7">
+          <Var scope="local" type="Fint">i</Var>
+          <indexRange>
+            <lowerBound>
+              <FintConstant type="Fint">1</FintConstant>
+            </lowerBound>
+            <upperBound>
+              <FintConstant type="Fint">10</FintConstant>
+            </upperBound>
+            <step>
+              <FintConstant type="Fint">1</FintConstant>
+            </step>
+          </indexRange>
+          <body>
+            <FwriteStatement file="original.f90" lineno="9">
+              <namedValueList>
+                <namedValue name="unit" value="*"/>
+                <namedValue name="fmt" value="*"/>
+              </namedValueList>
+              <valueList>
+                <value>
+                  <FcharacterConstant type="C55a4be9215d0">first body, i = </FcharacterConstant>
+                </value>
+                <value>
+                  <Var scope="local" type="Fint">i</Var>
+                </value>
+              </valueList>
+            </FwriteStatement>
+            <FwriteStatement file="original.f90" lineno="15">
+              <namedValueList>
+                <namedValue name="unit" value="*"/>
+                <namedValue name="fmt" value="*"/>
+              </namedValueList>
+              <valueList>
+                <value>
+                  <FcharacterConstant type="C55a4be922b00">second body, i = </FcharacterConstant>
+                </value>
+                <value>
+                  <Var scope="local" type="Fint">i</Var>
+                </value>
+              </valueList>
+            </FwriteStatement>
+          </body>
+        </FdoStatement>
+      </body>
+    </FfunctionDefinition>
+  </globalDeclarations>
+</XcodeProgram>

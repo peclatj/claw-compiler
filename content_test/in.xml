@@ -1,0 +1,103 @@
+<XcodeProgram source="original.f90"
+              language="Fortran"
+              time="2018-06-06 14:48:32"
+              compiler-info="XcodeML/Fortran-FrontEnd"
+              version="1.0">
+  <typeTable>
+    <FfunctionType type="F55a4be91fa40" return_type="Fvoid" is_program="true"/>
+    <FbasicType type="C55a4be9215d0" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">16</FintConstant>
+      </len>
+    </FbasicType>
+    <FbasicType type="C55a4be922b00" ref="Fcharacter">
+      <len>
+        <FintConstant type="Fint">17</FintConstant>
+      </len>
+    </FbasicType>
+  </typeTable>
+  <globalSymbols>
+    <id type="F55a4be91fa40" sclass="ffunc">
+      <name>first_program</name>
+    </id>
+  </globalSymbols>
+  <globalDeclarations>
+    <FfunctionDefinition lineno="1" file="original.f90">
+      <name type="F55a4be91fa40">first_program</name>
+      <symbols>
+        <id type="Fint" sclass="flocal">
+          <name>i</name>
+        </id>
+      </symbols>
+      <declarations>
+        <varDecl lineno="3" file="original.f90">
+          <name type="Fint">i</name>
+        </varDecl>
+      </declarations>
+      <body>
+        <FpragmaStatement lineno="6" file="original.f90">claw loop-fusion</FpragmaStatement>
+        <FdoStatement lineno="7" file="original.f90">
+          <Var type="Fint" scope="local">i</Var>
+          <indexRange>
+            <lowerBound>
+              <FintConstant type="Fint">1</FintConstant>
+            </lowerBound>
+            <upperBound>
+              <FintConstant type="Fint">10</FintConstant>
+            </upperBound>
+            <step>
+              <FintConstant type="Fint">1</FintConstant>
+            </step>
+          </indexRange>
+          <body>
+            <FwriteStatement lineno="9" file="original.f90">
+              <namedValueList>
+                <namedValue name="unit" value="*"/>
+                <namedValue name="fmt" value="*"/>
+              </namedValueList>
+              <valueList>
+                <value>
+                  <FcharacterConstant type="C55a4be9215d0">first body, i = </FcharacterConstant>
+                </value>
+                <value>
+                  <Var type="Fint" scope="local">i</Var>
+                </value>
+              </valueList>
+            </FwriteStatement>
+          </body>
+        </FdoStatement>
+        <FpragmaStatement lineno="12" file="original.f90">claw loop-fusion</FpragmaStatement>
+        <FdoStatement lineno="13" file="original.f90">
+          <Var type="Fint" scope="local">i</Var>
+          <indexRange>
+            <lowerBound>
+              <FintConstant type="Fint">1</FintConstant>
+            </lowerBound>
+            <upperBound>
+              <FintConstant type="Fint">10</FintConstant>
+            </upperBound>
+            <step>
+              <FintConstant type="Fint">1</FintConstant>
+            </step>
+          </indexRange>
+          <body>
+            <FwriteStatement lineno="15" file="original.f90">
+              <namedValueList>
+                <namedValue name="unit" value="*"/>
+                <namedValue name="fmt" value="*"/>
+              </namedValueList>
+              <valueList>
+                <value>
+                  <FcharacterConstant type="C55a4be922b00">second body, i = </FcharacterConstant>
+                </value>
+                <value>
+                  <Var type="Fint" scope="local">i</Var>
+                </value>
+              </valueList>
+            </FwriteStatement>
+          </body>
+        </FdoStatement>
+      </body>
+    </FfunctionDefinition>
+  </globalDeclarations>
+</XcodeProgram>
