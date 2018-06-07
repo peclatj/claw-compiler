@@ -1,34 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<XcodeProgram compiler-info="XcodeML/Fortran-FrontEnd" language="Fortran" source="original.f90" time="2018-06-06 14:48:32" version="1.0">
+<XcodeProgram compiler-info="XcodeML/Fortran-FrontEnd" language="Fortran" source="original.f90" time="2018-06-06 15:42:40" version="1.0">
   <typeTable>
-    <FfunctionType is_program="true" return_type="Fvoid" type="F55a4be91fa40"/>
-    <FbasicType ref="Fcharacter" type="C55a4be9215d0">
+    <FfunctionType is_program="true" return_type="Fvoid" type="F5580a6ebea40"/>
+    <FbasicType ref="Fcharacter" type="C5580a6ec1670">
       <len>
         <FintConstant type="Fint">16</FintConstant>
       </len>
     </FbasicType>
-    <FbasicType ref="Fcharacter" type="C55a4be922b00">
+    <FbasicType ref="Fcharacter" type="C5580a6ec2ba0">
       <len>
         <FintConstant type="Fint">17</FintConstant>
       </len>
     </FbasicType>
   </typeTable>
   <globalSymbols>
-    <id sclass="ffunc" type="F55a4be91fa40">
+    <id sclass="ffunc" type="F5580a6ebea40">
       <name>first_program</name>
     </id>
   </globalSymbols>
   <globalDeclarations>
     <FfunctionDefinition file="original.f90" lineno="1">
-      <name type="F55a4be91fa40">first_program</name>
+      <name type="F5580a6ebea40">first_program</name>
       <symbols>
         <id sclass="flocal" type="Fint">
           <name>i</name>
+        </id>
+        <id sclass="flocal" type="Fint">
+          <name>a</name>
+        </id>
+        <id sclass="flocal" type="Fint">
+          <name>b</name>
+        </id>
+        <id sclass="flocal" type="Fint">
+          <name>c</name>
         </id>
       </symbols>
       <declarations>
         <varDecl file="original.f90" lineno="3">
           <name type="Fint">i</name>
+        </varDecl>
+        <varDecl file="original.f90" lineno="3">
+          <name type="Fint">a</name>
+          <value>
+            <FintConstant type="Fint">2</FintConstant>
+          </value>
+        </varDecl>
+        <varDecl file="original.f90" lineno="3">
+          <name type="Fint">b</name>
+          <value>
+            <FintConstant type="Fint">4</FintConstant>
+          </value>
+        </varDecl>
+        <varDecl file="original.f90" lineno="3">
+          <name type="Fint">c</name>
         </varDecl>
       </declarations>
       <body>
@@ -53,7 +77,7 @@
               </namedValueList>
               <valueList>
                 <value>
-                  <FcharacterConstant type="C55a4be9215d0">first body, i = </FcharacterConstant>
+                  <FcharacterConstant type="C5580a6ec1670">first body, i = </FcharacterConstant>
                 </value>
                 <value>
                   <Var scope="local" type="Fint">i</Var>
@@ -67,7 +91,7 @@
               </namedValueList>
               <valueList>
                 <value>
-                  <FcharacterConstant type="C55a4be922b00">second body, i = </FcharacterConstant>
+                  <FcharacterConstant type="C5580a6ec2ba0">second body, i = </FcharacterConstant>
                 </value>
                 <value>
                   <Var scope="local" type="Fint">i</Var>
@@ -76,6 +100,13 @@
             </FwriteStatement>
           </body>
         </FdoStatement>
+        <FassignStatement file="original.f90" lineno="19">
+          <Var scope="local" type="Fint">c</Var>
+          <mulExpr type="Fint">
+            <Var scope="local" type="Fint">b</Var>
+            <Var scope="local" type="Fint">b</Var>
+          </mulExpr>
+        </FassignStatement>
       </body>
     </FfunctionDefinition>
   </globalDeclarations>

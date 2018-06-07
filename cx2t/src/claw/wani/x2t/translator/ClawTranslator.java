@@ -21,6 +21,7 @@ import claw.wani.language.ClawPragma;
 import claw.wani.transformation.internal.OpenAccContinuation;
 import claw.wani.transformation.ll.caching.Kcaching;
 import claw.wani.transformation.ll.directive.DirectivePrimitive;
+import claw.wani.transformation.ll.first_directive.FirstDirective;
 import claw.wani.transformation.ll.loop.*;
 import claw.wani.transformation.ll.utility.ArrayToFctCall;
 import claw.wani.transformation.ll.utility.UtilityRemove;
@@ -130,6 +131,9 @@ public class ClawTranslator implements Translator {
       case IGNORE:
       case VERBATIM:
       case NO_DEP:
+        break;
+      case FIRST_DIRECTIVE:
+        addTransformation(xcodeml, new FirstDirective(analyzedPragma));
         break;
       default:
         throw new IllegalDirectiveException(null, "Unrecognized CLAW directive",

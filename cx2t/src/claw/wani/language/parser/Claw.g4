@@ -59,6 +59,10 @@ directive[ClawPragma l]
   | LOOP_INTERCHANGE loop_interchange_clauses[$l] EOF
     { $l.setDirective(ClawDirective.LOOP_INTERCHANGE); }
 
+  // first directive
+  | FIRST_DIRECTIVE
+    { $l.setDirective(ClawDirective.FIRST_DIRECTIVE); }
+
   // loop-extract directive
   | LOOP_EXTRACT range_option mapping_option_list[m] loop_extract_clauses[$l] EOF
     {
@@ -554,6 +558,7 @@ PARALLELIZE      : 'parallelize';
 REMOVE           : 'remove';
 IGNORE           : 'ignore';
 VERBATIM         : 'verbatim';
+FIRST_DIRECTIVE  : 'first-directive';
 
 
 // CLAW Clauses

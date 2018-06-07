@@ -75,6 +75,7 @@ refer to the developer's guide
     <group name="on-the-fly" />
     <group name="kcache" />
     <group name="if-extract" />
+    <group name="first-directive" />
     <!-- High-level transformations -->
     <group name="parallelize" />
     <group name="parallelize-forward" />

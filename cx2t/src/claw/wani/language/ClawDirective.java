@@ -25,5 +25,6 @@ public enum ClawDirective {
   PRIMITIVE,
   PARALLELIZE,
   REMOVE,
-  VERBATIM
+  VERBATIM,
+  FIRST_DIRECTIVE
 }

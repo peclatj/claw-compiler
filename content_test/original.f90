@@ -1,6 +1,6 @@
 PROGRAM first_program
 	!First comment
-	INTEGER::i
+	INTEGER::i, a = 2, b = 4, c
 
 	!Second comment
 	!$claw loop-fusion
@@ -14,5 +14,9 @@ PROGRAM first_program
 		!Body 2 comment
 		WRITE(*,*) "second body, i = ", i
 	END DO
+
+	!$claw first-directive
+	c = a * b
+
 	!End comment
 END PROGRAM first_program
